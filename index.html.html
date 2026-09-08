@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,69 +59,17 @@
       font-size: 0.875rem;
     }
 
-    .mode-toggle.view {
-      background: #1B2440;
-      color: #EEF1F8;
-      border-color: #27314F;
-    }
-
     main {
       max-width: 1200px;
       margin: 0 auto;
       padding: 1.5rem 1rem;
     }
 
-    .tabs {
-      display: flex;
-      gap: 0.5rem;
-      border-bottom: 2px solid #27314F;
-      overflow-x: auto;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .tab-btn {
-      padding: 0.5rem 1rem;
-      background: transparent;
-      color: #8B96B4;
-      border: none;
-      cursor: pointer;
-      font-weight: normal;
-      font-size: 0.875rem;
-      white-space: nowrap;
-    }
-
-    .tab-btn.active {
-      background: #161E33;
-      color: #EEF1F8;
-      border-bottom: 2px solid #D4F542;
-      font-weight: bold;
-    }
-
-    .content-view,
-    .content-edit {
-      display: none;
-    }
-
-    .content-view.active,
-    .content-edit.active {
-      display: block;
-    }
-
-    .section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
     .panel {
       background: #161E33;
       border-radius: 0.5rem;
       overflow: hidden;
+      padding: 1.5rem;
     }
 
     .row {
@@ -130,12 +77,13 @@
       grid-template-columns: 2rem 1fr 4rem 5rem;
       gap: 1rem;
       align-items: center;
-      padding: 1rem;
+      padding: 1rem 0;
       border-top: 1px solid #27314F;
     }
 
     .row:first-child {
       border-top: none;
+      padding-top: 0;
     }
 
     .pos {
@@ -176,118 +124,19 @@
       font-family: ui-monospace, monospace;
     }
 
-    .copy-btn,
-    .save-btn {
-      width: 100%;
-      padding: 0.75rem;
-      background: #1B2440;
-      color: #EEF1F8;
-      border: 1px solid #27314F;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      font-weight: bold;
-      margin-top: 1rem;
-      font-size: 0.875rem;
-    }
-
-    .save-btn {
-      background: rgba(212, 245, 66, 0.2);
-      color: #D4F542;
-      border-color: #D4F542;
-    }
-
-    .copy-btn:hover,
-    .save-btn:hover {
-      background: #27314F;
-    }
-
-    .race-selector {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    select,
-    input {
-      padding: 0.5rem;
-      background: #1B2440;
-      color: #EEF1F8;
-      border: 1px solid #27314F;
-      border-radius: 0.375rem;
-      font-size: 0.875rem;
-    }
-
-    select:focus,
-    input:focus {
-      outline: none;
-      border-color: #D4F542;
-    }
-
-    .grid-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.75rem;
-    }
-
-    .grid-table th {
-      text-align: left;
-      padding: 0.75rem;
-      font-weight: 600;
-      color: #8B96B4;
-      border-bottom: 1px solid #27314F;
-      background: #161E33;
-      position: sticky;
-      left: 0;
-    }
-
-    .grid-table td {
-      padding: 0.5rem;
-      border-top: 1px solid #27314F;
-      text-align: center;
-    }
-
-    .grid-table td:first-child {
-      text-align: left;
-      position: sticky;
-      left: 0;
-      background: #161E33;
-      border-right: 1px solid #27314F;
-      font-weight: bold;
-      font-size: 0.875rem;
-    }
-
-    .winner {
-      color: #D7F04A;
-    }
-
-    .no-data {
-      color: #27314F;
-    }
-
     .message {
       background: rgba(212, 245, 66, 0.1);
       color: #D4F542;
       padding: 0.75rem 1rem;
       text-align: center;
       font-size: 0.875rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .message.error {
       background: rgba(232, 0, 45, 0.1);
       color: #E8002D;
-    }
-
-    .note {
-      font-size: 0.75rem;
-      color: #8B96B4;
-      margin-top: 1rem;
-    }
-
-    .text-mono {
-      font-family: ui-monospace, monospace;
-      font-variant-numeric: tabular-nums;
     }
 
     .loading {
@@ -296,38 +145,22 @@
       color: #8B96B4;
     }
 
-    .sync-status {
-      font-size: 0.75rem;
-      color: #8B96B4;
-      margin-top: 0.5rem;
+    h2 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
     }
 
     @media (max-width: 768px) {
       .row {
         grid-template-columns: 2rem 1fr 3rem;
-        gap: 0.5rem;
       }
-
       .stats {
         display: none;
-      }
-
-      h2 {
-        font-size: 1.125rem;
-      }
-
-      .tabs {
-        gap: 0.25rem;
-      }
-
-      .tab-btn {
-        font-size: 0.75rem;
-        padding: 0.375rem 0.75rem;
       }
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="header-content">
@@ -335,93 +168,17 @@
         <h1>🏁 KonosCup</h1>
         <p class="subtitle" id="raceCount">Cargando...</p>
       </div>
-      <button class="mode-toggle" id="modeToggle" onclick="toggleMode()">📊 Ver</button>
     </div>
   </header>
 
-  <div id="message"></div>
-
   <main>
-    <!-- MODO VER (LECTURA) -->
-    <div class="content-view active">
-      <section class="section">
-        <h2>Campeonato</h2>
-        <div class="panel" id="viewStandings">
-          <div class="loading">Cargando datos...</div>
-        </div>
-        <button class="copy-btn" onclick="copyStandings()">📋 Copiar para compartir</button>
-        <div class="sync-status" id="syncStatus">Sincronizando con BD...</div>
-      </section>
-
-      <section class="section">
-        <h2>Constructores</h2>
-        <div class="panel" id="viewConstructors">
-          <div class="loading">Cargando datos...</div>
-        </div>
-      </section>
-    </div>
-
-    <!-- MODO EDICIÓN -->
-    <div class="content-edit">
-      <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('campeonato')">🏆 Campeonato</button>
-        <button class="tab-btn" onclick="switchTab('fechas')">🏁 Fechas</button>
-        <button class="tab-btn" onclick="switchTab('grilla')">📊 Grilla</button>
-        <button class="tab-btn" onclick="switchTab('pilotos')">👨‍✈️ Pilotos</button>
+    <div id="message"></div>
+    <section>
+      <h2>Campeonato</h2>
+      <div class="panel" id="standings">
+        <div class="loading">Cargando datos...</div>
       </div>
-
-      <!-- TAB CAMPEONATO -->
-      <div id="tab-campeonato" class="tab-content">
-        <section class="section">
-          <h2>Posiciones</h2>
-          <div class="panel" id="editStandings">
-            <div class="loading">Cargando datos...</div>
-          </div>
-          <button class="copy-btn" onclick="copyStandings()">📋 Copiar para compartir</button>
-          <button class="save-btn" onclick="saveToFirebase()">💾 Guardar a BD</button>
-        </section>
-      </div>
-
-      <!-- TAB FECHAS -->
-      <div id="tab-fechas" class="tab-content" style="display:none;">
-        <section class="section">
-          <div class="race-selector">
-            <label>Carrera:</label>
-            <select id="raceSelect" onchange="updateRaceUI()">
-              <option value="0">Fecha 1 - Australia</option>
-            </select>
-          </div>
-          <div class="panel" id="raceResults">
-            <div class="loading">Cargando datos...</div>
-          </div>
-          <button class="save-btn" onclick="saveToFirebase()">💾 Guardar a BD</button>
-        </section>
-      </div>
-
-      <!-- TAB GRILLA -->
-      <div id="tab-grilla" class="tab-content" style="display:none;">
-        <section class="section">
-          <h2>Puntos por fecha</h2>
-          <div style="overflow-x: auto; border-radius: 0.5rem; background: #161E33;">
-            <table class="grid-table" id="gridTable">
-              <thead></thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-
-      <!-- TAB PILOTOS -->
-      <div id="tab-pilotos" class="tab-content" style="display:none;">
-        <section class="section">
-          <h2>Pilotos y equipos</h2>
-          <div class="panel" id="pilotsList">
-            <div class="loading">Cargando datos...</div>
-          </div>
-          <p class="note">💾 Los cambios en pilotos se guardan automático</p>
-        </section>
-      </div>
-    </div>
+    </section>
   </main>
 
   <!-- Firebase SDK -->
@@ -430,9 +187,8 @@
 
   <script>
     // ========== CONFIGURACIÓN FIREBASE ==========
-    // REEMPLAZA ESTO CON TUS CREDENCIALES
     const firebaseConfig = {
-      apiKey: "AIzaSyDA7EzLZo7n_Gke-AzjNu3zJRPCx__n8Hc",
+      apiKey: "AIzaSyDA7EzLZo7n_Gke-AzJNu3zJRPCx__n8Hc",
       authDomain: "konoscup-f1.firebaseapp.com",
       projectId: "konoscup-f1",
       storageBucket: "konoscup-f1.firebasestorage.app",
@@ -441,10 +197,13 @@
     };
 
     // Inicializar Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore(app);
+    let db = null;
+    let state = null;
 
-    // ========== DATOS ==========
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.firestore();
+
+    // ========== DATOS BASE ==========
     const TEAMS = [
       { name: "McLaren", color: "#FF8000" },
       { name: "Ferrari", color: "#E8002D" },
@@ -479,17 +238,6 @@
       { id: "d7", name: "Boy-Jager", team: "Ferrari", adj: 0 },
     ];
 
-    // ========== STATE ==========
-    let state = {
-      drivers: DEFAULT_DRIVERS,
-      results: {},
-      points: DEFAULT_POINTS,
-    };
-
-    let currentRace = 0;
-    let viewMode = true;
-    let isSyncing = false;
-
     // ========== HELPERS ==========
     function teamColor(t) {
       return TEAMS.find(x => x.name === t)?.color || "#8B93AD";
@@ -519,7 +267,6 @@
           finishes,
           raced,
           wins: finishes[1] || 0,
-          podios: (finishes[1] || 0) + (finishes[2] || 0) + (finishes[3] || 0),
           base,
           total: base + (Number(d.adj) || 0),
         };
@@ -539,76 +286,16 @@
       return RACES.filter((_, i) => state.drivers.some((d) => posOf(d.id, i))).length;
     }
 
-    // ========== FIREBASE ==========
-    async function loadFromFirebase() {
-      try {
-        showSync("Cargando desde BD...");
-        const doc = await db.collection("konoscup").doc("v1").get();
-
-        if (doc.exists) {
-          const data = doc.data();
-          state = {
-            drivers: data.drivers || DEFAULT_DRIVERS,
-            results: data.results || {},
-            points: data.points || DEFAULT_POINTS,
-          };
-          showSync("✓ Sincronizado");
-        } else {
-          showSync("Primera vez - usando datos por defecto");
-        }
-      } catch (error) {
-        console.error("Error cargando Firebase:", error);
-        showSync("⚠️ Error sincronizando (usando localStorage)");
-        // Fallback a localStorage
-        const saved = localStorage.getItem("konoscup-v1");
-        if (saved) {
-          state = JSON.parse(saved);
-        }
-      }
-      render();
-    }
-
-    async function saveToFirebase() {
-      if (isSyncing) {
-        showMessage("Ya está guardando...");
-        return;
-      }
-
-      try {
-        isSyncing = true;
-        showSync("Guardando a BD...");
-
-        await db.collection("konoscup").doc("v1").set({
-          drivers: state.drivers,
-          results: state.results,
-          points: state.points,
-          lastUpdated: new Date(),
-        });
-
-        showMessage("✓ Guardado a BD");
-        showSync("✓ Sincronizado");
-        isSyncing = false;
-      } catch (error) {
-        console.error("Error guardando:", error);
-        showMessage("✗ Error al guardar");
-        showSync("⚠️ Error (probá de nuevo)");
-        isSyncing = false;
-      }
-    }
-
-    function showSync(msg) {
-      document.getElementById("syncStatus").textContent = msg;
-    }
-
-    // ========== UI UPDATES ==========
+    // ========== RENDER ==========
     function render() {
+      if (!state) return;
+
       const standings = getStandings();
       const doneRaces = getDoneRaces();
 
       document.getElementById("raceCount").textContent = `${doneRaces} de ${RACES.length} carreras`;
 
-      // View standings
-      const viewStandingsHTML = standings.map((r, idx) => `
+      const html = standings.map((r, idx) => `
         <div class="row">
           <div class="pos">${idx + 1}</div>
           <div>
@@ -624,171 +311,59 @@
           <div class="points">${r.total}</div>
         </div>
       `).join("");
-      document.getElementById("viewStandings").innerHTML = viewStandingsHTML;
-      document.getElementById("editStandings").innerHTML = viewStandingsHTML;
 
-      // Constructors
-      const map = {};
-      standings.forEach((r) => {
-        if (!map[r.team]) map[r.team] = { team: r.team, pts: 0, pilotos: [], wins: 0 };
-        map[r.team].pts += r.total;
-        map[r.team].wins += r.wins;
-        map[r.team].pilotos.push(r.name);
-      });
-      const constructors = Object.values(map).sort((a, b) => b.pts - a.pts || b.wins - a.wins);
-
-      const constructorsHTML = constructors.map((c, idx) => `
-        <div class="row" style="grid-template-columns: 1fr auto;">
-          <div>
-            <div class="pilot-name">
-              <span class="team-bar" style="background: ${teamColor(c.team)}"></span>
-              ${c.team}
-            </div>
-            <div class="team-name">${c.pilotos.join(", ")}</div>
-          </div>
-          <div class="points">${c.pts}</div>
-        </div>
-      `).join("");
-      document.getElementById("viewConstructors").innerHTML = constructorsHTML;
-
-      // Grid table
-      const gridHTML = `
-        <thead>
-          <tr>
-            <th>Piloto</th>
-            ${RACES.map(([name, code]) => `<th title="${name}">${code}</th>`).join("")}
-            <th>Tot</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${standings.map((r) => `
-            <tr>
-              <td style="display: flex; align-items: center; gap: 0.5rem;">
-                <span class="team-bar" style="background: ${teamColor(r.team)}; height: 12px;"></span>
-                ${r.name}
-              </td>
-              ${r.perRace.map((pts, i) => {
-        const p = posOf(r.id, i);
-        const color = p ? (p === 1 ? "#D7F04A" : "#EEF1F8") : "#27314F";
-        return `<td style="color: ${color};" class="text-mono">${p ? pts : "·"}</td>`;
-      }).join("")}
-              <td class="text-mono" style="font-weight: bold;">${r.total}</td>
-            </tr>
-          `).join("")}
-        </tbody>
-      `;
-      document.getElementById("gridTable").innerHTML = gridHTML;
-
-      // Race selector
-      const raceSelectHTML = RACES.map(([name], i) =>
-        `<option value="${i}">Fecha ${i + 1} - ${name}</option>`
-      ).join("");
-      document.getElementById("raceSelect").innerHTML = raceSelectHTML;
-
-      // Race results
-      updateRaceUI();
+      document.getElementById("standings").innerHTML = html || '<div class="loading">Sin datos aún</div>';
     }
 
-    function updateRaceUI() {
-      const race = parseInt(document.getElementById("raceSelect").value);
-
-      const resultsHTML = state.drivers.map((d) => {
-        const p = posOf(d.id, race);
-        return `
-          <div class="row" style="grid-template-columns: 1fr auto auto;">
-            <div class="pilot-name">
-              <span class="team-bar" style="background: ${teamColor(d.team)}"></span>
-              ${d.name}
-            </div>
-            <select onchange="setPos('${d.id}', ${race}, this.value ? parseInt(this.value) : null); render();" style="min-width: 70px;">
-              <option value="">No corrió</option>
-              ${Array.from({ length: 20 }, (_, i) => i + 1).map(n => `<option value="${n}" ${p === n ? "selected" : ""}>P${n}</option>`).join("")}
-            </select>
-            <div style="text-align: right; font-weight: bold; font-size: 0.875rem; min-width: 50px;" class="text-mono">
-              ${pointsFor(p)} pts
-            </div>
-          </div>
-        `;
-      }).join("");
-
-      document.getElementById("raceResults").innerHTML = resultsHTML;
-    }
-
-    function setPos(id, i, val) {
-      if (!state.results[id]) state.results[id] = {};
-      if (val) {
-        state.results[id][i] = val;
-      } else {
-        delete state.results[i];
-      }
-      render();
-      // Auto-save después de 2 segundos
-      clearTimeout(window.autoSaveTimer);
-      window.autoSaveTimer = setTimeout(() => saveToFirebase(), 2000);
-    }
-
-    function toggleMode() {
-      viewMode = !viewMode;
-      document.querySelector(".content-view").classList.toggle("active");
-      document.querySelector(".content-edit").classList.toggle("active");
-      document.getElementById("modeToggle").textContent = viewMode ? "📊 Ver" : "✏️ Editar";
-      document.getElementById("modeToggle").classList.toggle("view");
-    }
-
-    function switchTab(tab) {
-      document.querySelectorAll(".tab-content").forEach(el => el.style.display = "none");
-      document.getElementById(`tab-${tab}`).style.display = "block";
-
-      document.querySelectorAll(".tab-btn").forEach(el => el.classList.remove("active"));
-      event.target.classList.add("active");
-    }
-
-    function copyStandings() {
-      const standings = getStandings();
-      const text = `KonosCup · campeonato tras ${getDoneRaces()} de 24 fechas\n\n` +
-        standings.map((r, i) => `${i + 1}. ${r.name} (${r.team}) — ${r.total}`).join("\n");
-
-      navigator.clipboard.writeText(text).then(() => {
-        showMessage("✓ Copiado");
-      });
-    }
-
-    function showMessage(msg) {
+    function showMessage(msg, isError = false) {
       const el = document.getElementById("message");
-      const isError = msg.includes("✗");
-      el.innerHTML = `<div class="message ${isError ? "error" : ""}">${msg}</div>`;
+      el.innerHTML = `<div class="message ${isError ? 'error' : ''}">${msg}</div>`;
       setTimeout(() => {
         el.innerHTML = "";
-      }, 2000);
+      }, 3000);
     }
 
-    // ========== LISTEN TO REALTIME CHANGES ==========
-    function listenToChanges() {
-      db.collection("konoscup").doc("v1").onSnapshot((doc) => {
-        if (doc.exists) {
-          const data = doc.data();
-          state = {
-            drivers: data.drivers || DEFAULT_DRIVERS,
-            results: data.results || {},
-            points: data.points || DEFAULT_POINTS,
-          };
-          render();
-        }
-      }, (error) => {
-        console.error("Error listening:", error);
-        showSync("⚠️ No se puede sincronizar en tiempo real");
-      });
-    }
-
-    // ========== INIT ==========
+    // ========== FIREBASE LISTENER ==========
     async function init() {
-      await loadFromFirebase();
-      listenToChanges();
+      try {
+        showMessage("🔄 Conectando a Firebase...");
+
+        // Cargar datos iniciales
+        const doc = await db.collection("konoscup").doc("v1").get();
+        
+        if (doc.exists) {
+          state = doc.data();
+          showMessage("✓ Sincronizado desde Firebase");
+        } else {
+          state = {
+            drivers: DEFAULT_DRIVERS,
+            results: {},
+            points: DEFAULT_POINTS,
+          };
+          showMessage("ℹ️ Usando datos por defecto");
+        }
+
+        render();
+
+        // Escuchar cambios en tiempo real
+        db.collection("konoscup").doc("v1").onSnapshot((doc) => {
+          if (doc.exists) {
+            state = doc.data();
+            render();
+          }
+        }, (error) => {
+          console.error("Error escuchando Firebase:", error);
+          showMessage("⚠️ Error sincronizando", true);
+        });
+
+      } catch (error) {
+        console.error("Error:", error);
+        showMessage("❌ Error: " + error.message, true);
+      }
     }
 
     // Iniciar cuando cargue
     init();
   </script>
 </body>
-
 </html>
