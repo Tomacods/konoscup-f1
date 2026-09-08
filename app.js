@@ -14,7 +14,7 @@ import {
    ============================================================ */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDA7EzLZo7n_Gke-AzJNu3zJRPCx__n8Hc",
+  apiKey: "AIzaSyDA7EzLZo7n_Gke-AzjNu3zJRPCx__n8Hc",
   authDomain: "konoscup-f1.firebaseapp.com",
   projectId: "konoscup-f1",
   storageBucket: "konoscup-f1.firebasestorage.app",
